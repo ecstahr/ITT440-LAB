@@ -1,7 +1,7 @@
 import socket
 
 s=socket.socket()
-print("Berjay buat soket")
+print("Berjaya buat soket")
 
 port = 8888
 
@@ -12,7 +12,7 @@ s.listen(5)
 print("soket tengah menunggu client!")
 
 while True:
-	c, addr=s.accept()
+	c,addr=s.accept()
 	print("Dapat capaian dari: "+str(addr))
 
 	c,send(b'Terima Kasih!')
