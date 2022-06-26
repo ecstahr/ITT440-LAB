@@ -18,8 +18,11 @@ sendData = file.read(1024)
 s.send(sendFile.encode("utf-8"))
 
 while sendData:
-	print("[+]Message received!\n", s.recv(1024).decode("utf-8"))
+	msg=s.recv(1024)
+	print("[+]Message received!\n")
+	print(msg.decode("utf-8"))
 	print("File name: " + sendFile)
+
 	s.send(sendData)
 	sendData = file.read(1024)
 
