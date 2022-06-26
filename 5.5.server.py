@@ -13,13 +13,24 @@ print('\nWaiting for incoming connection...')
 
 while True:
 	c, addr = s.accept()
+<<<<<<< HEAD
 	print("[!] Connected to client.\n")
+=======
+	print("[\] Connected to client.\n")
+
+#	msg= "You are now connected to: " + addr[0]
+#	c.send(msg.encode("utf-8"))
+>>>>>>> 2c65b8b (mhm)
 
 	filename= c.recv(1024)
 	file= open(filename, "wb")
 
 	msg= "You are now connected to: " + addr[0]
+<<<<<<< HEAD
 	c.send(msg.encode("utf-8"))
+=======
+	c.send(msg.encode())
+>>>>>>> 2c65b8b (mhm)
 
 	#receive data from client
 	recvdata= c.recv(1024)
@@ -33,6 +44,10 @@ while True:
 
 	#close connection
 	c.close()
+<<<<<<< HEAD
 	print("Connection closed.\n")
+=======
+	print("[\] Connection is now closed.\n")
+>>>>>>> 2c65b8b (mhm)
 
 	break
